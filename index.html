@@ -372,6 +372,28 @@ footer{
   .wiz-card{padding:20px 16px}
   .footer-grid{grid-template-columns:1fr}
 }
+
+/* ── PERMANENT DISCLAIMER STRIP ── */
+.perm-disclaimer{
+  position:relative;z-index:5;
+  background:var(--bg2);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:22px 24px;
+  margin-top:48px;
+}
+.perm-disclaimer-inner{
+  max-width:1040px;margin:0 auto;
+  font-size:.76rem;color:var(--text3);
+  line-height:1.75;
+}
+.perm-disclaimer-inner strong{
+  display:block;font-family:'Nunito',sans-serif;font-weight:800;
+  font-size:.82rem;color:var(--text2);margin-bottom:8px;letter-spacing:.02em;
+}
+.perm-disclaimer-inner p{margin-bottom:8px}
+.perm-disclaimer-inner p:last-child{margin-bottom:0}
+
 </style>
 </head>
 <body>
@@ -706,6 +728,18 @@ footer{
 </div>
 
 <!-- ══════════════ FOOTER ══════════════ -->
+
+<!-- ── PERMANENT DISCLAIMER STRIP ── -->
+<div class="perm-disclaimer">
+  <div class="perm-disclaimer-inner">
+    <strong>📋 Disclaimer</strong>
+    <p>SoftBooks is a search and redirection tool designed to help users find books that are available on the internet. This website does not host, store, or distribute any PDF files or copyrighted materials on its own servers.</p>
+    <p>All books and documents accessible through this site are hosted on third-party websites. SoftBooks only provides links or redirections to external sources that are already publicly available on the internet.</p>
+    <p>If you are a copyright owner and believe that any content linked through this website violates your rights, please contact the respective hosting website directly for removal.</p>
+    <p>By using SoftBooks, you acknowledge that the website is not responsible for the content, accuracy, or availability of external links.</p>
+  </div>
+</div>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-col">
@@ -801,24 +835,24 @@ function showPage(id){navTo(id);}
 // ════════════════════════════════════════════
 const BOOKS=[
   {title:"The Diary of a Young Girl",author:"Anne Frank",genre:"Biography",emoji:"📓",url:"https://archive.org/download/TheAnneFrankDiary/The%20Diary%20of%20a%20Young%20Girl%20-%20Anne%20Frank.pdf",trending:true},
-  {title:"The Origin of Species",author:"Charles Darwin",genre:"Science",emoji:"🦎",url:"https://www.gutenberg.org/files/1228/1228-pdf.pdf",trending:true},
+  {title:"The Origin of Species",author:"Charles Darwin",genre:"Science",emoji:"🦎",url:"https://www.gutenberg.org/ebooks/1228",trending:true},
   {title:"Murder on the Orient Express",author:"Agatha Christie",genre:"Mystery",emoji:"🔍",url:"https://archive.org/download/MurderOnTheOrientExpress_20170919/Murder%20on%20the%20Orient%20Express.pdf",trending:true},
-  {title:"Pride and Prejudice",author:"Jane Austen",genre:"Romance",emoji:"💌",url:"https://www.gutenberg.org/files/1342/1342-pdf.pdf",trending:true},
+  {title:"Pride and Prejudice",author:"Jane Austen",genre:"Romance",emoji:"💌",url:"https://www.gutenberg.org/ebooks/1342",trending:true},
   {title:"1984",author:"George Orwell",genre:"Dystopia",emoji:"👁️",url:"https://archive.org/download/GeorgeOrwell1984/1984.pdf",trending:true},
   {title:"Animal Farm",author:"George Orwell",genre:"Satire",emoji:"🐷",url:"https://archive.org/download/AnimalFarm_201901/Animal%20Farm.pdf",trending:true},
-  {title:"The Great Gatsby",author:"F. Scott Fitzgerald",genre:"Classic",emoji:"🥂",url:"https://www.gutenberg.org/files/64317/64317-pdf.pdf",trending:false},
+  {title:"The Great Gatsby",author:"F. Scott Fitzgerald",genre:"Classic",emoji:"🥂",url:"https://www.gutenberg.org/ebooks/64317",trending:false},
   {title:"To Kill a Mockingbird",author:"Harper Lee",genre:"Classic",emoji:"🐦",url:"https://archive.org/download/to-kill-a-mockingbird-by-harper-lee/To%20Kill%20a%20Mockingbird%20by%20Harper%20Lee.pdf",trending:false},
   {title:"The Alchemist",author:"Paulo Coelho",genre:"Fiction",emoji:"⚗️",url:"https://archive.org/download/the-alchemist-paulo-coelho-pdf/The%20Alchemist%20-%20Paulo%20Coelho.pdf",trending:true},
   {title:"Brave New World",author:"Aldous Huxley",genre:"Dystopia",emoji:"🧬",url:"https://archive.org/download/brave-new-world_202008/brave-new-world.pdf",trending:false},
-  {title:"The Adventures of Sherlock Holmes",author:"Arthur Conan Doyle",genre:"Mystery",emoji:"🔎",url:"https://www.gutenberg.org/files/1661/1661-pdf.pdf",trending:true},
-  {title:"Treasure Island",author:"Robert Louis Stevenson",genre:"Adventure",emoji:"🏴‍☠️",url:"https://www.gutenberg.org/files/120/120-pdf.pdf",trending:false},
-  {title:"Robinson Crusoe",author:"Daniel Defoe",genre:"Adventure",emoji:"🏝️",url:"https://www.gutenberg.org/files/521/521-pdf.pdf",trending:false},
-  {title:"The Count of Monte Cristo",author:"Alexandre Dumas",genre:"Adventure",emoji:"⚔️",url:"https://www.gutenberg.org/files/1184/1184-pdf.pdf",trending:false},
-  {title:"Journey to the Centre of the Earth",author:"Jules Verne",genre:"Adventure",emoji:"🌋",url:"https://www.gutenberg.org/files/18857/18857-pdf.pdf",trending:false},
-  {title:"Twenty Thousand Leagues Under the Sea",author:"Jules Verne",genre:"Adventure",emoji:"🐙",url:"https://www.gutenberg.org/files/164/164-pdf.pdf",trending:false},
+  {title:"The Adventures of Sherlock Holmes",author:"Arthur Conan Doyle",genre:"Mystery",emoji:"🔎",url:"https://www.gutenberg.org/ebooks/1661",trending:true},
+  {title:"Treasure Island",author:"Robert Louis Stevenson",genre:"Adventure",emoji:"🏴‍☠️",url:"https://www.gutenberg.org/ebooks/120",trending:false},
+  {title:"Robinson Crusoe",author:"Daniel Defoe",genre:"Adventure",emoji:"🏝️",url:"https://www.gutenberg.org/ebooks/521",trending:false},
+  {title:"The Count of Monte Cristo",author:"Alexandre Dumas",genre:"Adventure",emoji:"⚔️",url:"https://www.gutenberg.org/ebooks/1184",trending:false},
+  {title:"Journey to the Centre of the Earth",author:"Jules Verne",genre:"Adventure",emoji:"🌋",url:"https://www.gutenberg.org/ebooks/18857",trending:false},
+  {title:"Twenty Thousand Leagues Under the Sea",author:"Jules Verne",genre:"Adventure",emoji:"🐙",url:"https://www.gutenberg.org/ebooks/164",trending:false},
   {title:"Meditations",author:"Marcus Aurelius",genre:"Philosophy",emoji:"🧘",url:"https://archive.org/download/Meditations_201612/Meditations.pdf",trending:false},
   {title:"The Republic",author:"Plato",genre:"Philosophy",emoji:"🏛️",url:"https://archive.org/download/TheRepublicByPlato/republic.pdf",trending:false},
-  {title:"Thus Spoke Zarathustra",author:"Friedrich Nietzsche",genre:"Philosophy",emoji:"⚡",url:"https://www.gutenberg.org/files/1998/1998-pdf.pdf",trending:false},
+  {title:"Thus Spoke Zarathustra",author:"Friedrich Nietzsche",genre:"Philosophy",emoji:"⚡",url:"https://www.gutenberg.org/ebooks/1998",trending:false},
   {title:"The Art of War",author:"Sun Tzu",genre:"Philosophy",emoji:"🗡️",url:"https://archive.org/download/TheArtOfWar_83/the_art_of_war.pdf",trending:true},
   {title:"A Brief History of Time",author:"Stephen Hawking",genre:"Science",emoji:"🌌",url:"https://archive.org/download/ABriefHistoryOfTimeStephenHawking/A%20Brief%20History%20of%20Time%20-%20Stephen%20Hawking.pdf",trending:true},
   {title:"The Selfish Gene",author:"Richard Dawkins",genre:"Science",emoji:"🧬",url:"https://archive.org/download/the-selfish-gene/the-selfish-gene.pdf",trending:false},
@@ -828,29 +862,29 @@ const BOOKS=[
   {title:"How to Win Friends and Influence People",author:"Dale Carnegie",genre:"Self Help",emoji:"🤝",url:"https://archive.org/download/HowToWinFriendsAndInfluencePeople-DaleCarnegie/How%20to%20Win%20Friends%20and%20Influence%20People%20-%20Dale%20Carnegie.pdf",trending:true},
   {title:"The 7 Habits of Highly Effective People",author:"Stephen Covey",genre:"Self Help",emoji:"✅",url:"https://archive.org/download/7HabitsOfHighlyEffectivePeople/7%20Habits%20of%20Highly%20Effective%20People.pdf",trending:false},
   {title:"Man's Search for Meaning",author:"Viktor Frankl",genre:"Self Help",emoji:"🕯️",url:"https://archive.org/download/mans-search-for-meaning/mans-search-for-meaning.pdf",trending:false},
-  {title:"Frankenstein",author:"Mary Shelley",genre:"Horror",emoji:"⚡",url:"https://www.gutenberg.org/files/84/84-pdf.pdf",trending:false},
-  {title:"Dracula",author:"Bram Stoker",genre:"Horror",emoji:"🧛",url:"https://www.gutenberg.org/files/345/345-pdf.pdf",trending:false},
-  {title:"The Strange Case of Dr Jekyll and Mr Hyde",author:"R.L. Stevenson",genre:"Horror",emoji:"🪞",url:"https://www.gutenberg.org/files/43/43-pdf.pdf",trending:false},
-  {title:"Jane Eyre",author:"Charlotte Brontë",genre:"Romance",emoji:"🌹",url:"https://www.gutenberg.org/files/1260/1260-pdf.pdf",trending:false},
-  {title:"Wuthering Heights",author:"Emily Brontë",genre:"Romance",emoji:"🌧️",url:"https://www.gutenberg.org/files/768/768-pdf.pdf",trending:false},
-  {title:"Romeo and Juliet",author:"William Shakespeare",genre:"Drama",emoji:"🎭",url:"https://www.gutenberg.org/files/1513/1513-pdf.pdf",trending:false},
-  {title:"Hamlet",author:"William Shakespeare",genre:"Drama",emoji:"💀",url:"https://www.gutenberg.org/files/1524/1524-pdf.pdf",trending:false},
-  {title:"The War of the Worlds",author:"H.G. Wells",genre:"Sci-Fi",emoji:"👽",url:"https://www.gutenberg.org/files/36/36-pdf.pdf",trending:false},
-  {title:"The Time Machine",author:"H.G. Wells",genre:"Sci-Fi",emoji:"⏱️",url:"https://www.gutenberg.org/files/35/35-pdf.pdf",trending:false},
+  {title:"Frankenstein",author:"Mary Shelley",genre:"Horror",emoji:"⚡",url:"https://www.gutenberg.org/ebooks/84",trending:false},
+  {title:"Dracula",author:"Bram Stoker",genre:"Horror",emoji:"🧛",url:"https://www.gutenberg.org/ebooks/345",trending:false},
+  {title:"The Strange Case of Dr Jekyll and Mr Hyde",author:"R.L. Stevenson",genre:"Horror",emoji:"🪞",url:"https://www.gutenberg.org/ebooks/43",trending:false},
+  {title:"Jane Eyre",author:"Charlotte Brontë",genre:"Romance",emoji:"🌹",url:"https://www.gutenberg.org/ebooks/1260",trending:false},
+  {title:"Wuthering Heights",author:"Emily Brontë",genre:"Romance",emoji:"🌧️",url:"https://www.gutenberg.org/ebooks/768",trending:false},
+  {title:"Romeo and Juliet",author:"William Shakespeare",genre:"Drama",emoji:"🎭",url:"https://www.gutenberg.org/ebooks/1513",trending:false},
+  {title:"Hamlet",author:"William Shakespeare",genre:"Drama",emoji:"💀",url:"https://www.gutenberg.org/ebooks/1524",trending:false},
+  {title:"The War of the Worlds",author:"H.G. Wells",genre:"Sci-Fi",emoji:"👽",url:"https://www.gutenberg.org/ebooks/36",trending:false},
+  {title:"The Time Machine",author:"H.G. Wells",genre:"Sci-Fi",emoji:"⏱️",url:"https://www.gutenberg.org/ebooks/35",trending:false},
   {title:"Fahrenheit 451",author:"Ray Bradbury",genre:"Sci-Fi",emoji:"🔥",url:"https://archive.org/download/fahrenheit-451-by-ray-bradbury/Fahrenheit%20451.pdf",trending:false},
-  {title:"Don Quixote",author:"Miguel de Cervantes",genre:"Classic",emoji:"🏇",url:"https://www.gutenberg.org/files/996/996-pdf.pdf",trending:false},
-  {title:"Crime and Punishment",author:"Fyodor Dostoevsky",genre:"Classic",emoji:"⚖️",url:"https://www.gutenberg.org/files/2554/2554-pdf.pdf",trending:false},
-  {title:"War and Peace",author:"Leo Tolstoy",genre:"Classic",emoji:"🪖",url:"https://www.gutenberg.org/files/2600/2600-pdf.pdf",trending:false},
-  {title:"Anna Karenina",author:"Leo Tolstoy",genre:"Romance",emoji:"🚂",url:"https://www.gutenberg.org/files/1399/1399-pdf.pdf",trending:false},
-  {title:"Les Misérables",author:"Victor Hugo",genre:"Classic",emoji:"🇫🇷",url:"https://www.gutenberg.org/files/135/135-pdf.pdf",trending:false},
-  {title:"The Metamorphosis",author:"Franz Kafka",genre:"Classic",emoji:"🪲",url:"https://www.gutenberg.org/files/5200/5200-pdf.pdf",trending:false},
+  {title:"Don Quixote",author:"Miguel de Cervantes",genre:"Classic",emoji:"🏇",url:"https://www.gutenberg.org/ebooks/996",trending:false},
+  {title:"Crime and Punishment",author:"Fyodor Dostoevsky",genre:"Classic",emoji:"⚖️",url:"https://www.gutenberg.org/ebooks/2554",trending:false},
+  {title:"War and Peace",author:"Leo Tolstoy",genre:"Classic",emoji:"🪖",url:"https://www.gutenberg.org/ebooks/2600",trending:false},
+  {title:"Anna Karenina",author:"Leo Tolstoy",genre:"Romance",emoji:"🚂",url:"https://www.gutenberg.org/ebooks/1399",trending:false},
+  {title:"Les Misérables",author:"Victor Hugo",genre:"Classic",emoji:"🇫🇷",url:"https://www.gutenberg.org/ebooks/135",trending:false},
+  {title:"The Metamorphosis",author:"Franz Kafka",genre:"Classic",emoji:"🪲",url:"https://www.gutenberg.org/ebooks/5200",trending:false},
   {title:"The Bhagavad Gita",author:"Vyasa",genre:"Spirituality",emoji:"🪷",url:"https://archive.org/download/TheBhagavadGita_201606/The%20Bhagavad%20Gita.pdf",trending:false},
   {title:"Arthashastra",author:"Chanakya",genre:"Philosophy",emoji:"🏹",url:"https://archive.org/download/Arthashastra/Arthashastra.pdf",trending:false},
-  {title:"The Autobiography of Benjamin Franklin",author:"Benjamin Franklin",genre:"Biography",emoji:"⚡",url:"https://www.gutenberg.org/files/20203/20203-pdf.pdf",trending:false},
+  {title:"The Autobiography of Benjamin Franklin",author:"Benjamin Franklin",genre:"Biography",emoji:"⚡",url:"https://www.gutenberg.org/ebooks/20203",trending:false},
   {title:"Long Walk to Freedom",author:"Nelson Mandela",genre:"Biography",emoji:"✊",url:"https://archive.org/download/long-walk-to-freedom/long-walk-to-freedom.pdf",trending:false},
-  {title:"Alice's Adventures in Wonderland",author:"Lewis Carroll",genre:"Children",emoji:"🐇",url:"https://www.gutenberg.org/files/11/11-pdf.pdf",trending:false},
+  {title:"Alice's Adventures in Wonderland",author:"Lewis Carroll",genre:"Children",emoji:"🐇",url:"https://www.gutenberg.org/ebooks/11",trending:false},
   {title:"The Little Prince",author:"Antoine de Saint-Exupéry",genre:"Children",emoji:"🌹",url:"https://archive.org/download/TheLittlePrince/The%20Little%20Prince.pdf",trending:true},
-  {title:"The Jungle Book",author:"Rudyard Kipling",genre:"Children",emoji:"🐯",url:"https://www.gutenberg.org/files/236/236-pdf.pdf",trending:false},
+  {title:"The Jungle Book",author:"Rudyard Kipling",genre:"Children",emoji:"🐯",url:"https://www.gutenberg.org/ebooks/236",trending:false},
 ];
 
 const ALL_GENRES=[...new Set(BOOKS.map(b=>b.genre))].sort();
